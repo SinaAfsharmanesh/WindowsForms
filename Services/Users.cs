@@ -1,7 +1,12 @@
-﻿using WindowsForms.Model;
-namespace WindowsForms.Services
+﻿namespace WindowsForms.Model;
+
+internal partial class Users
 {
-    internal class UsersServices : Users
+    public void EditUser(string firstname, string lastname, string email, int tel)
     {
+        FirstName = firstname;
+        LastName = lastname;
+        Email = email;
+        Tel = tel;
     }
 }

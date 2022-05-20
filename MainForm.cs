@@ -1,23 +1,21 @@
 using WindowsForms.UI;
-namespace WindowsForms
+
+namespace WindowsForms;
+
+public partial class MainForm : Form
 {
-    public partial class MainForm : Form
+    public MainForm()
     {
-        public MainForm()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
 
-        private void BtnAddPrdct_Click(object sender, EventArgs e)
-        {
-            ListPrdct.Items.Add(TxtBoxAddPrdct.Text);
-        }
+    private void BtnAddPrdct_Click(object sender, EventArgs e)
+    {
+        ListPrdct.Items.Add(TxtBoxAddPrdct.Text);
+    }
 
-        private void BtnShowCalc_Click(object sender, EventArgs e)
-        {
-            new Calc().Show();
-        }
-
-
+    private void BtnShowCalc_Click(object sender, EventArgs e)
+    {
+        new Calc().Show();
     }
 }

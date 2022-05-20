@@ -1,4 +1,6 @@
-﻿namespace WindowsForms.UI
+﻿using System.Windows.Forms;
+
+namespace WindowsForms.UI
 {
     partial class Calc
     {
