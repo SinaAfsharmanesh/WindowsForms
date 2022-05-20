@@ -11,9 +11,9 @@ internal partial class Users
         Count += 1;
     }
 
-    private static int Count { get; set; }
+    public static int Count { get; private set; }
 
-    private int Id { get; } = Count;
+    private int Id { get; set; } = Count;
 
     private string FirstName { get; set; }
 

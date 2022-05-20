@@ -9,4 +9,9 @@ internal partial class Users
         Email = email;
         Tel = tel;
     }
+
+    public void ResetId(int id)
+    {
+        Id = id;
+    }
 }
