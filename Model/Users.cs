@@ -1,6 +1,6 @@
 ﻿namespace WindowsForms.Model;
 
-internal partial class Users
+public partial class Users
 {
     public Users(string firstname, string lastname, string email, int tel)
     {
@@ -13,15 +13,15 @@ internal partial class Users
 
     public static int Count { get; private set; }
 
-    private int Id { get; set; } = Count;
+    public int Id { get; set; } = Count;
 
-    private string FirstName { get; set; }
+    public string FirstName { get; set; }
 
-    private string LastName { get; set; }
+    public string LastName { get; set; }
 
-    private string Email { get; set; }
+    public string Email { get; set; }
 
-    private int Tel { get; set; }
+    public int Tel { get; set; }
 
     ~Users()
     {

@@ -53,6 +53,7 @@
             this.BtnShowUsers.TabIndex = 1;
             this.BtnShowUsers.Text = "Show Users";
             this.BtnShowUsers.UseVisualStyleBackColor = true;
+            this.BtnShowUsers.Click += new System.EventHandler(this.BtnShowUsers_Click);
             // 
             // BtnShowCalc
             // 

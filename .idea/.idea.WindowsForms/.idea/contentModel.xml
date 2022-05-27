@@ -7,7 +7,9 @@
       <e p=".gitattributes" t="Include" />
       <e p=".gitignore" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
-      <e p="DB" t="Include" />
+      <e p="DB" t="Include">
+        <e p="InternalDB.cs" t="Include" />
+      </e>
       <e p="MainForm.cs" t="Include" />
       <e p="MainForm.Designer.cs" t="Include" />
       <e p="MainForm.resx" t="Include" />
@@ -26,7 +28,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
       <e p="Services" t="Include">
-        <e p="UsersServices.cs" t="Include" />
+        <e p="Users.cs" t="Include" />
       </e>
       <e p="UI" t="Include">
         <e p="Calc.cs" t="Include" />

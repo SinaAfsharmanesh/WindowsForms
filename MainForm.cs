@@ -18,4 +18,9 @@ public partial class MainForm : Form
     {
         new Calc().Show();
     }
+
+    private void BtnShowUsers_Click(object sender, EventArgs e)
+    {
+        new ViewUsers().Show();
+    }
 }

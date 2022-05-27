@@ -2,33 +2,33 @@
 
 namespace WindowsForms.DB;
 
-internal static class InternalDB
+public static class InternalDb
 {
-    private static List<Users>? usersList;
+    public static List<Users> UsersList { get; set; } = new() { new Users("Empty", "Empty", "Empty", 0) };
+
+    public static Users? GetUser(int id)
+    {
+        return UsersList[id];
+    }
 
     public static void AddUser(string firstname, string lastname, string email, int tel)
     {
-        usersList?.Add(new Users(firstname, lastname, email, tel));
+        UsersList?.Add(new Users(firstname, lastname, email, tel));
     }
 
     public static void DelUser(int id)
     {
-        if (usersList == null)
-            throw new NullReferenceException();
         var i = 1;
-        usersList.RemoveAt(id);
-        usersList.ForEach(x =>
+        UsersList.RemoveAt(id);
+        UsersList.ForEach(x =>
         {
             x.ResetId(i);
             i++;
         });
-        //for (var j = 1; j <= Users.Count; j++) usersList[j - 1].ResetId(j);
     }
 
     public static void EditUser(int id, string firstName, string lastName, string email, int tel)
     {
-        if (usersList == null)
-            throw new NullReferenceException();
-        usersList[id].EditUser(firstName, lastName, email, tel);
+        UsersList[id].EditUser(firstName, lastName, email, tel);
     }
 }
