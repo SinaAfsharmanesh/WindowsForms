@@ -23,4 +23,9 @@ public partial class MainForm : Form
     {
         new ViewUsers().Show();
     }
+
+    private void btnTeams_Click(object sender, EventArgs e)
+    {
+        new Teams().Show();
+    }
 }

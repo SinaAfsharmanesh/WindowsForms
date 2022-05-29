@@ -33,6 +33,7 @@
             this.BtnShowCalc = new System.Windows.Forms.Button();
             this.ListPrdct = new System.Windows.Forms.ListBox();
             this.TxtBoxAddPrdct = new System.Windows.Forms.TextBox();
+            this.btnTeams = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnAddPrdct
@@ -49,7 +50,7 @@
             // 
             this.BtnShowUsers.Location = new System.Drawing.Point(12, 408);
             this.BtnShowUsers.Name = "BtnShowUsers";
-            this.BtnShowUsers.Size = new System.Drawing.Size(120, 23);
+            this.BtnShowUsers.Size = new System.Drawing.Size(102, 42);
             this.BtnShowUsers.TabIndex = 1;
             this.BtnShowUsers.Text = "Show Users";
             this.BtnShowUsers.UseVisualStyleBackColor = true;
@@ -57,9 +58,9 @@
             // 
             // BtnShowCalc
             // 
-            this.BtnShowCalc.Location = new System.Drawing.Point(211, 408);
+            this.BtnShowCalc.Location = new System.Drawing.Point(120, 408);
             this.BtnShowCalc.Name = "BtnShowCalc";
-            this.BtnShowCalc.Size = new System.Drawing.Size(120, 23);
+            this.BtnShowCalc.Size = new System.Drawing.Size(102, 42);
             this.BtnShowCalc.TabIndex = 2;
             this.BtnShowCalc.Text = "Show Calculator";
             this.BtnShowCalc.UseVisualStyleBackColor = true;
@@ -81,11 +82,22 @@
             this.TxtBoxAddPrdct.Size = new System.Drawing.Size(237, 25);
             this.TxtBoxAddPrdct.TabIndex = 4;
             // 
+            // btnTeams
+            // 
+            this.btnTeams.Location = new System.Drawing.Point(228, 408);
+            this.btnTeams.Name = "btnTeams";
+            this.btnTeams.Size = new System.Drawing.Size(102, 42);
+            this.btnTeams.TabIndex = 5;
+            this.btnTeams.Text = "Show Team members";
+            this.btnTeams.UseVisualStyleBackColor = true;
+            this.btnTeams.Click += new System.EventHandler(this.btnTeams_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 439);
+            this.ClientSize = new System.Drawing.Size(342, 454);
+            this.Controls.Add(this.btnTeams);
             this.Controls.Add(this.TxtBoxAddPrdct);
             this.Controls.Add(this.ListPrdct);
             this.Controls.Add(this.BtnShowCalc);
@@ -104,5 +116,6 @@
         private Button BtnShowCalc;
         private ListBox ListPrdct;
         private TextBox TxtBoxAddPrdct;
+        private Button btnTeams;
     }
 }

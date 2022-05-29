@@ -5,7 +5,7 @@ namespace WindowsForms.Services
 {
     internal static class DateUtils
     {
-        public static DateTime Jalali_Miladi(string date)
+        public static DateTime Jalali(this string date)
         {
             var parts = date.Split('/');
             return new DateTime(Convert.ToInt32(parts[0]),
