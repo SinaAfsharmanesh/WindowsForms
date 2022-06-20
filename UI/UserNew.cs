@@ -1,17 +1,31 @@
-﻿using static WindowsForms.DB.InternalDb;
+﻿using WindowsForms.Model;
 
-namespace WindowsForms.UI;
-
-public partial class UserNew : Form
+namespace WindowsForms.UI
 {
-    public UserNew()
+    public partial class UserNew : Form
     {
-        InitializeComponent();
-    }
+        public UserNew()
+        {
+            InitializeComponent();
+        }
 
-    private void btnNew_Click(object sender, EventArgs e)
-    {
-        AddUser(txtBoxFirstName.Text, txtBoxLastName.Text, txtBoxEmail.Text, Convert.ToInt32(txtBoxTel.Text));
-        Dispose();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                User user = new User(textBox1.Text, textBox2.Text, textBox3.Text, dateTimePicker1.Value, textBox4.Text, textBox5.Text, true);
+                user.Insert(user);
+                MessageBox.Show("User added");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+                throw;
+            }
+        }
     }
 }

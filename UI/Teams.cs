@@ -18,7 +18,7 @@ namespace WindowsForms.UI
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var member = new TeamMembers(txtBoxFirstName.Text, txtBoxLastName.Text, DOBPick.Value, checkVip.Checked, Enum.Parse<TeamMembers.Teams>(ListTeams.Text));
-            if (member.Team == TeamMembers.Teams.Esteghlal)
+            if (member.Team == 0)
             {
                 listBoxBlue.Items.Add(member.GetMemberDetail());
             }

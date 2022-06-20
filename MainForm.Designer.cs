@@ -28,63 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnAddPrdct = new System.Windows.Forms.Button();
-            this.BtnShowUsers = new System.Windows.Forms.Button();
-            this.BtnShowCalc = new System.Windows.Forms.Button();
-            this.ListPrdct = new System.Windows.Forms.ListBox();
-            this.TxtBoxAddPrdct = new System.Windows.Forms.TextBox();
             this.btnTeams = new System.Windows.Forms.Button();
+            this.UserGrid = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // BtnAddPrdct
-            // 
-            this.BtnAddPrdct.Location = new System.Drawing.Point(255, 12);
-            this.BtnAddPrdct.Name = "BtnAddPrdct";
-            this.BtnAddPrdct.Size = new System.Drawing.Size(75, 23);
-            this.BtnAddPrdct.TabIndex = 0;
-            this.BtnAddPrdct.Text = "Add";
-            this.BtnAddPrdct.UseVisualStyleBackColor = true;
-            this.BtnAddPrdct.Click += new System.EventHandler(this.BtnAddPrdct_Click);
-            // 
-            // BtnShowUsers
-            // 
-            this.BtnShowUsers.Location = new System.Drawing.Point(12, 408);
-            this.BtnShowUsers.Name = "BtnShowUsers";
-            this.BtnShowUsers.Size = new System.Drawing.Size(102, 42);
-            this.BtnShowUsers.TabIndex = 1;
-            this.BtnShowUsers.Text = "Show Users";
-            this.BtnShowUsers.UseVisualStyleBackColor = true;
-            this.BtnShowUsers.Click += new System.EventHandler(this.BtnShowUsers_Click);
-            // 
-            // BtnShowCalc
-            // 
-            this.BtnShowCalc.Location = new System.Drawing.Point(120, 408);
-            this.BtnShowCalc.Name = "BtnShowCalc";
-            this.BtnShowCalc.Size = new System.Drawing.Size(102, 42);
-            this.BtnShowCalc.TabIndex = 2;
-            this.BtnShowCalc.Text = "Show Calculator";
-            this.BtnShowCalc.UseVisualStyleBackColor = true;
-            this.BtnShowCalc.Click += new System.EventHandler(this.BtnShowCalc_Click);
-            // 
-            // ListPrdct
-            // 
-            this.ListPrdct.FormattingEnabled = true;
-            this.ListPrdct.ItemHeight = 17;
-            this.ListPrdct.Location = new System.Drawing.Point(12, 41);
-            this.ListPrdct.Name = "ListPrdct";
-            this.ListPrdct.Size = new System.Drawing.Size(319, 361);
-            this.ListPrdct.TabIndex = 3;
-            // 
-            // TxtBoxAddPrdct
-            // 
-            this.TxtBoxAddPrdct.Location = new System.Drawing.Point(12, 12);
-            this.TxtBoxAddPrdct.Name = "TxtBoxAddPrdct";
-            this.TxtBoxAddPrdct.Size = new System.Drawing.Size(237, 25);
-            this.TxtBoxAddPrdct.TabIndex = 4;
             // 
             // btnTeams
             // 
-            this.btnTeams.Location = new System.Drawing.Point(228, 408);
+            this.btnTeams.Location = new System.Drawing.Point(230, 12);
             this.btnTeams.Name = "btnTeams";
             this.btnTeams.Size = new System.Drawing.Size(102, 42);
             this.btnTeams.TabIndex = 5;
@@ -92,30 +43,42 @@
             this.btnTeams.UseVisualStyleBackColor = true;
             this.btnTeams.Click += new System.EventHandler(this.btnTeams_Click);
             // 
+            // UserGrid
+            // 
+            this.UserGrid.Location = new System.Drawing.Point(12, 12);
+            this.UserGrid.Name = "UserGrid";
+            this.UserGrid.Size = new System.Drawing.Size(102, 42);
+            this.UserGrid.TabIndex = 7;
+            this.UserGrid.Text = "User Grid";
+            this.UserGrid.UseVisualStyleBackColor = true;
+            this.UserGrid.Click += new System.EventHandler(this.UserGrid_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Location = new System.Drawing.Point(12, 60);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(102, 42);
+            this.btnAddUser.TabIndex = 8;
+            this.btnAddUser.Text = "Add New User";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 454);
+            this.ClientSize = new System.Drawing.Size(344, 459);
+            this.Controls.Add(this.btnAddUser);
+            this.Controls.Add(this.UserGrid);
             this.Controls.Add(this.btnTeams);
-            this.Controls.Add(this.TxtBoxAddPrdct);
-            this.Controls.Add(this.ListPrdct);
-            this.Controls.Add(this.BtnShowCalc);
-            this.Controls.Add(this.BtnShowUsers);
-            this.Controls.Add(this.BtnAddPrdct);
             this.Name = "MainForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button BtnAddPrdct;
-        private Button BtnShowUsers;
-        private Button BtnShowCalc;
-        private ListBox ListPrdct;
-        private TextBox TxtBoxAddPrdct;
         private Button btnTeams;
+        private Button UserGrid;
+        private Button btnAddUser;
     }
 }

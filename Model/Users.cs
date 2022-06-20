@@ -1,19 +1,34 @@
 ﻿namespace WindowsForms.Model;
 
-public partial class Users
+public partial class User
 {
-    public Users(string firstname, string lastname, string email, int tel)
+    public User(int id, string firstname, string lastname, string nationalid, DateTime dob, string address, string email, bool isActive)
     {
+        Id = id;
         FirstName = firstname;
         LastName = lastname;
+        NatID = nationalid;
+        DOB = dob;
+        Address = address;
         Email = email;
-        Tel = tel;
-        Count += 1;
+        IsActive = isActive;
     }
 
-    public static int Count { get; private set; }
+    public User(string firstname, string lastname, string nationalid, DateTime dob, string address, string email, bool isActive)
+    {
+        Id = null;
+        FirstName = firstname;
+        LastName = lastname;
+        NatID = nationalid;
+        DOB = dob;
+        Address = address;
+        Email = email;
+        IsActive = isActive;
+    }
 
-    public int Id { get; set; } = Count;
+    public User() { }
+
+    public int? Id { get; set; } = null;
 
     public string FirstName { get; set; }
 
@@ -21,10 +36,11 @@ public partial class Users
 
     public string Email { get; set; }
 
-    public int Tel { get; set; }
+    public string Address { get; set; }
 
-    ~Users()
-    {
-        Count -= 1;
-    }
+    public string NatID { get; set; }
+
+    public DateTime DOB { get; set; }
+
+    public bool IsActive { get; set; }
 }

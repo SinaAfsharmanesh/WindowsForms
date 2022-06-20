@@ -18,6 +18,7 @@ namespace WindowsForms.Model
             VIP = vip;
             Team = team;
         }
+        public int Id { set; get; }
 
         public string FirstName { get; }
         public string LastName { get; }
