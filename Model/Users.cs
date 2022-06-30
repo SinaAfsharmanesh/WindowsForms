@@ -1,4 +1,6 @@
-﻿namespace WindowsForms.Model;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WindowsForms.Model;
 
 public partial class User
 {
@@ -29,15 +31,14 @@ public partial class User
     public User() { }
 
     public int? Id { get; set; } = null;
-
     public string FirstName { get; set; }
-
     public string LastName { get; set; }
 
-    public string Email { get; set; }
+    public string? Email { get; set; }
 
-    public string Address { get; set; }
+    public string? Address { get; set; }
 
+    [StringLength(10)]
     public string NatID { get; set; }
 
     public DateTime DOB { get; set; }

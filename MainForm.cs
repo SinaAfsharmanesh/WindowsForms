@@ -1,4 +1,6 @@
-using WindowsForms.UI;
+using WindowsForms.UI.UserCTRL;
+using WindowsForms.UI.UserCTRL.Products;
+using WindowsForms.UI.UserCTRL.Users;
 
 namespace WindowsForms;
 
@@ -9,18 +11,21 @@ public partial class MainForm : Form
         InitializeComponent();
     }
 
-    private void btnTeams_Click(object sender, EventArgs e)
+    private void ShowUC(BaseCTRL ctrl)
     {
-        new Teams().Show();
+        ctrl.Width = panelMain.Width;
+        ctrl.Height = panelMain.Height;
+        panelMain.Controls.Clear();
+        panelMain.Controls.Add(ctrl);
     }
 
-    private void UserGrid_Click(object sender, EventArgs e)
+    private void BtnProducts_Click(object sender, EventArgs e)
     {
-        new UserGrid().Show();
+        ShowUC(new ProductsGrid());
     }
 
-    private void btnAddUser_Click(object sender, EventArgs e)
+    private void BtnUsers_Click(object sender, EventArgs e)
     {
-        new UserNew().Show();
+        ShowUC(new UsersGrid());
     }
 }
