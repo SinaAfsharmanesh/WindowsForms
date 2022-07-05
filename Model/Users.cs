@@ -2,7 +2,7 @@
 
 namespace WindowsForms.Model;
 
-public partial class User
+public partial class User : IDisposable
 {
     public User(int id, string firstname, string lastname, string nationalid, DateTime dob, string address, string email, bool isActive)
     {
@@ -44,4 +44,8 @@ public partial class User
     public DateTime DOB { get; set; }
 
     public bool IsActive { get; set; }
+    public void Dispose()
+    {
+        throw new NotImplementedException();
+    }
 }

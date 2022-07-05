@@ -15,9 +15,9 @@ namespace WindowsForms.Services
 
         DBContext db = new DBContext();
 
-        public DbSet<T> GetDbSet<T>() where T : class
+        public List<T> GetDbSet<T>() where T : class
         {
-            return db.Set<T>();
+            return db.Set<T>().ToList();
         }
 
         public void Add<T>(T model) where T : class
@@ -26,14 +26,14 @@ namespace WindowsForms.Services
             db.SaveChanges();
         }
 
-        public bool Edit<T>(T? model, int Id) where T : class
+        public bool Edit<T>(T? model, int id) where T : class
         {
-            T? m = db.Find<T>(Id);
+            T? m = db.Find<T>(id);
 
             if (m != null)
             {
+                db.Entry(m).State = EntityState.Detached;
                 m = model;
-                db.Update(m);
                 db.Entry(m).State = EntityState.Modified;
                 db.SaveChanges();
                 return true;
